@@ -48,8 +48,7 @@
     $scope.deleteThing = function(thing) {
       $http.delete('/api/things/' + thing._id)
         .success(function(data) {
-          $scope.things.splice(data, 1);
-        })
+          $scope.things.splice(data, 1);        })
         .error(function(data) {
           console.log('Error: ' + data);
         });

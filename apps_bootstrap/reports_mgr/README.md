@@ -1,4 +1,4 @@
-https://www.safaribooksonline.com/library/view/web-development-with/9781784391508/
+VIDEO: https://www.safaribooksonline.com/library/view/web-development-with/9781784391508/
 
 [Angular-better-placeholders](https://github.com/dmackerman/angular-better-placeholders)
 
@@ -12,9 +12,10 @@ https://www.safaribooksonline.com/library/view/web-development-with/978178439150
 - using $location to redirect when logged in
 - serving data when route loads
 - using services to share data
-- ngAnimate to transition between routes
-- add [animate.css](http://daneden.github.io/animate.css/)  -- course provides slimmed down version
-- - add ng-class set equal to 
+- *Animating routes*
+- add `ngAnimate` && [animate.css](http://daneden.github.io/animate.css/)  -- course provides slimmed down version
+- - new $scope.pageclass = "login" and $scope.pageclass = "report" in .controllers
+- - set <div class="container pageclass"></div>
 
 ## Tables
 - using ngRepeat to display data in a table 
