@@ -17,3 +17,8 @@ Learning Web Development with Bootstrap and AngularJS
 - Alert, Popover, Modal, Tooltip, Datepicker, Aside, Typeahead, Select, Tab
 - depends on *ngAnimate* ['mgcrea.ngStrap']
 
+### Filters
+- Search name in contacts: <li ng-repeat="contact in contacts | filter:{'name': search}">
+- Search w/ order: <li ng-repeat="contact in contacts | filter:search | orderBy:'name'">
+- our *Truncate* filter:    (acts same as limitTo)
+- - checks input length against our limit. If input is greater than limit, truncate and add ellipse. Else return the input

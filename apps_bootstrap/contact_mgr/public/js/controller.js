@@ -8,17 +8,17 @@ angular.module('contactsMgr', ['ngRoute', 'ngSanitize', 'mgcrea.ngStrap'])
 
   $routeProvider.when('/', {
     controller: 'indexCtrl',
-    templateUrl: '/assets/partials/index.html'
+    templateUrl: '/public/partials/index.html'
   })
 
   .when('/add-contact', {
     controller: 'addCtrl',
-    templateUrl: '/assets/partials/add.html'
+    templateUrl: '/public/partials/add.html'
   })
 
   .when('/contact/:id', {
     controller: 'contactCtrl',
-    templateUrl: '/assets/partials/contact.html'
+    templateUrl: '/public/partials/contact.html'
   })
 
   .otherwise({
@@ -327,7 +327,7 @@ angular.module('contactsMgr', ['ngRoute', 'ngSanitize', 'mgcrea.ngStrap'])
 .directive('editable', function() {
   return {
     restrict: 'AE',
-    templateUrl: '/assets/partials/editable.html',
+    templateUrl: '/public/partials/editable.html',
     scope: {
       value: '=editable',
       field: '@fieldType'
