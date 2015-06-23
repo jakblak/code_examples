@@ -8,6 +8,7 @@
   appCtrl.$inject = ['$scope', '$location'];
 
   function appCtrl($scope, $location) {
+
     $scope.startSearch = function() {
       $location.path('/');
     };

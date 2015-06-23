@@ -7,6 +7,7 @@ VIDEO: https://www.safaribooksonline.com/library/view/web-development-with/97817
 - using ngSubmit and $http for response
 - 3.4 builds loading bar w/ ngShow
 - use bootstrap Alerts for success and error
+- bs-typeahead to search for name
 
 ## Routing
 - using $location to redirect when logged in

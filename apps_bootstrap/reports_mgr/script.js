@@ -15,7 +15,7 @@ var module = angular.module('demoApp', ['ngMockE2E','ngRoute','mgcrea.ngStrap'])
     }
     return proxy;
   });
-  
+
   $routeProvider
   .when('/login', {
     templateUrl: 'user.tpl.html',
@@ -60,6 +60,7 @@ module.controller('ReportCtrl', ['$scope', '$http', '$filter', 'reportdata', 'Us
   $scope.predicate = 'name';
   $scope.names = reportdata.map(function(value){ return value.name; });
   $scope.reverse = false;
+
   $scope.orderClick = function(predicateName){
     if(predicateName == $scope.predicate) $scope.reverse = !$scope.reverse;
     else{
@@ -67,6 +68,7 @@ module.controller('ReportCtrl', ['$scope', '$http', '$filter', 'reportdata', 'Us
       $scope.reverse = false;
     }
   };
+
   $scope.sendEmails = function(){
     var emails = [];
     var filtered = $filter('filter')($scope.data, $scope.filter);

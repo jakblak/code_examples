@@ -12,17 +12,14 @@
       controller: 'indexCtrl',
       templateUrl: '/public/partials/index.html'
     })
-
     .when('/add-contact', {
       controller: 'addCtrl',
       templateUrl: '/public/partials/add.html'
     })
-
     .when('/contact/:id', {
       controller: 'contactCtrl',
       templateUrl: '/public/partials/contact.html'
     })
-
     .otherwise({
       redirectTo: '/'
     });
