@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Movie DB</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body ng-app='app'>
+  <div class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <a href="#" class="navbar-brand">
+        <span class="glyphicon glyphicon-film"></span>MovieDB
+      </a>
+    </div>
+  </div>
+
+    <div class="container">
+      <div class="row">
+
+      <div ng-view></div>
+
+      </div>
+    </div>
+    <!-- Vendor Scripts -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+
+    <!-- Angular JS Files-->
+    <script src="app.js"></script>
+    <script src="route-config.js"></script>
+    <script src="catalog/catalogCtrl.js"></script>
+    <script src="genre/genreCtrl.js"></script>
+    <script src="movie/movieCtrl.js"></script>
+    <script src="movie/movie.service.js"></script>
+    <script src="components/filters/paginate.filter.js"></script>
+  </body>
+</html>

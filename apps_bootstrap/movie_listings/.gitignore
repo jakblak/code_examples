@@ -1,8 +1,7 @@
-.DS_Store
-dist/
+logs/*
+!.gitkeep
 node_modules/
 bower_components/
-npm-debug.log
-vendor/
 tmp
+.DS_Store
 .idea
