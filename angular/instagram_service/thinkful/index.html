@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="photos">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="https://code.angularjs.org/1.2.18/angular-animate.min.js"></script>
+  <script src="js/app.js"></script>
+  <title>Find Photos</title>
+</head>
+<body ng-controller="photoCtrl">
+  <div class="container">
+    <h2>Insta-Search</h2>  
+    <div>
+
+    <p>Find recent Instagram photos by tag.</p>
+
+    </div>
+    <!-- Search Form -->
+    <div id="search">
+      <form role="form" method="POST" id="post-form" name="photoForm" ng-submit="submit()" novalidate>
+        <div class="form-group">
+        <input type="text" class="form-control" name="tagInput" ng-model="photo.tag" placeholder="What do you want to find?" required>
+        </div>
+        <br>
+        <button type="submit" class="search">Go!</button>
+        <div ng-if="submitted"><button type="submit" class="retry" ng-click="reset()">Reset</button></div>
+      </form>
+      <br>
+    </div>
+
+    <!-- Results -->
+        {{message}}
+    <div id="results-container">
+      <span class="photo-results" ng-if="submitted" ng-repeat="photo in photos">
+      <img ng-class="{hover_in: hover}" 
+          ng-mouseenter="hover = true"
+          ng-mouseleave="hover = false" 
+          ng-src="{{ photo.images.thumbnail.url }}" 
+          style="border-radius:10%" class="hover"> 
+    </div>
+  </div> <!-- /container -->
+</body>
+</html>
