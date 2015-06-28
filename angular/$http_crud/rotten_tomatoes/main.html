@@ -1,0 +1,55 @@
+<!-- Basic 2 column layout -->
+<section data-ng-init="loadMovies()">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            This is our content area
+        </div>
+        <div class="col-sm-4">
+            Here is our sidebar
+        </div>
+    </div>
+</div><br>
+
+<div class="movie-container col-sm-2 col-xs-6" ng-repeat="movie in movies">
+      <a href="{{movie.links}}" class="movie-thumb">
+        <img class="thumbnail img-responsive" ng-src="{{ movie.posters.detailed }}">
+        <h5>{{movie.title}}</h5>
+      </a>
+    </div>
+    <p class="starring" ng-show="movie.abridged_cast.length > 3">
+        <span class="light-label">Starring: </span>
+      {{ movie.abridged_cast[0].name }}, {{ movie.abridged_cast[1].name }}, {{movie.abridged_cast[2].name}}</p>
+
+<!-- 2 columns within main content -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>Lorem ipsum dolor...<p>
+                </div>
+                <div class="col-sm-6">
+                    <p>Class aptent taciti...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Floats - not needed if within a row -->
+<div class="clearfix">
+  <div class="pull-left">...</div>
+  <div class="pull-right">...</div>
+</div>
+
+<!-- Center block to center elements -->
+<div class="center-block">...</div>
+
+<!-- Use form-group and control-label classes -->
+<div class="form-group">
+  <label for="name" class="control-label">Name</label>
+  <input type="text" id="name" class="form-control">
+</div>
+
+</section>
