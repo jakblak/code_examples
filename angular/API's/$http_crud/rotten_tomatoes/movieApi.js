@@ -22,6 +22,7 @@
     }
 
     function upcomingMovies() {
+    // http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?apikey=675765&callback=JSON_CALLBACK
       return $http.jsonp('http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json', {
         params: {
           apikey: '6b6y55b6u4zjz5zpyyd4tvpy',
