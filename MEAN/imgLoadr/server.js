@@ -37,8 +37,12 @@ app.use(multer({
   onFileUploadStart: function(file) {
     console.log(file.originalname + ' is starting ...');
   },
-  onFileUploadComplete: function(file) {
+  onFileUploadComplete: function(file, req, res) {
     console.log(file.fieldname + ' uploaded to  ' + file.path);
+    var fileimage = file.name;
+    req.middlewareStorage = {
+      fileimage: fileimage
+    }
   }
 }));
 

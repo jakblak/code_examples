@@ -4,10 +4,11 @@ var Article = require('../models/Article.model');
 
 router.post('/upload', function(req, res) {
   var article = new Article();
+  var fileimage = req.middlewareStorage.fileimage;
 
   article.title = req.body.title;
   article.content = req.body.content;
-  article.image = req.body.file;
+  article.image = fileimage;
 
   article.save(function(err, doc) {
     if(err) {
