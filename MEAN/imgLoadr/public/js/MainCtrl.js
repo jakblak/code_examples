@@ -23,6 +23,7 @@
           content: $scope.content
         },
         file: file
+        //file: $scope.picFile
       });
 
       file.upload.then(function(response) {

@@ -1,3 +1,3 @@
 - POSTing to server   -   api/upload
-- does not add the image but gets 'success'
+- adds image to folder + gets Undefined on model
 - need to use [gridFS](https://github.com/aheckmann/gridfs-stream)
